@@ -18,7 +18,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "ngreactcomponentlib": "0.0.2",
+    "ngreactcomponentlib": "0.1.1",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-avatar": "3.7.0",

@@ -1,19 +1,21 @@
 import { AfterViewInit, Component, Input, NgZone, OnChanges, OnInit } from '@angular/core';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Avatar from 'react-avatar';
+import Avatar, { ReactAvatarProps } from 'react-avatar';
 
 @Component({
-  selector: 'app-ng-simple-badges',
-  templateUrl: './ng-simple-badges.component.html'
+  selector: 'app-ng-avatar',
+  templateUrl: './ng-avatar.component.html'
 })
-export class NgSimpleBadgesComponent implements OnChanges, AfterViewInit {
-	containerId: string = 'simple-badges-xxxxxxxx'.replace(/[x]/g, c => (Math.random() * 16 | 0).toString(16));
+export class NgAvatarComponent implements OnChanges, AfterViewInit {
+	containerId: string = 'avatar-xxxxxxxx'.replace(/[x]/g, c => (Math.random() * 16 | 0).toString(16));
   
 	@Input()
 	name: string = '';
 	@Input()
-	logoColor: string = '';
+	round: string = '';
+  @Input()
+	color?: string = undefined;
 
 	constructor(private _ngZone: NgZone) { }
 
@@ -28,9 +30,10 @@ export class NgSimpleBadgesComponent implements OnChanges, AfterViewInit {
   }
 
   render = () => {
-    const props = {
+    const props: ReactAvatarProps = {
       name: this.name,
-			logoColor: this.logoColor
+      round: this.round,
+      color: this.color
     };
 
 		if (document.getElementById(this.containerId)) {
@@ -43,5 +46,4 @@ export class NgSimpleBadgesComponent implements OnChanges, AfterViewInit {
       );
 		}
   }
-
 }

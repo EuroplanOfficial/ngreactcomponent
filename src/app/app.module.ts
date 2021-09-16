@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgSimpleBadgesModule } from 'ngreactcomponentlib/lib/ng-simple-badges';
+import { NgAvatarModule } from 'ngreactcomponentlib';
+// import { NgSimpleBadgesModule } from 'projects/ngreactcomponentlib/src/lib/ng-simple-badges/ng-simple-badges.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgSimpleBadgesModule
+    NgAvatarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

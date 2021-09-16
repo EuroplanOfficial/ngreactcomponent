@@ -1,5 +1,2 @@
-/*
- * Public API Surface of ngreactcomponentlib
- */
-
-export * from './lib/ng-simple-badges';
+export * from './lib/ng-avatar.component';
+export * from './lib/ng-avatar.module';
